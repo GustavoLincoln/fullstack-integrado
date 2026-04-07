@@ -1,0 +1,81 @@
+<div class="toolbar">
+  <div>
+    <h1 class="page-title">Benefícios</h1>
+    <p class="page-subtitle">Visualize, edite e transfira valores entre benefícios.</p>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-primary" (click)="novo()">Novo benefício</button>
+    <button class="btn btn-success" (click)="transferir()">Transferir</button>
+  </div>
+</div>
+
+<div class="stat-grid" *ngIf="!carregando && beneficios.length > 0">
+  <div class="stat-card">
+    <div class="stat-label">Total de registros</div>
+    <div class="stat-value">{{ beneficios.length }}</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-label">Benefícios ativos</div>
+    <div class="stat-value">{{ totalAtivos() }}</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-label">Valor total</div>
+    <div class="stat-value">{{ valorTotal() | currency:'BRL':'symbol':'1.2-2' }}</div>
+  </div>
+</div>
+
+<div *ngIf="erro" class="alert alert-error">
+  {{ erro }}
+</div>
+
+<div class="card" *ngIf="carregando">
+  <div class="loading-block">
+    <div class="spinner"></div>
+    <div class="loading-text">Carregando benefícios...</div>
+  </div>
+</div>
+
+<div class="card" *ngIf="!carregando">
+  <div *ngIf="beneficios.length === 0 && !erro" class="empty-state">
+    Nenhum benefício encontrado.
+  </div>
+
+  <div *ngIf="beneficios.length > 0" class="table-wrapper">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Status</th>
+          <th style="width: 180px;">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let beneficio of beneficios">
+          <td>#{{ beneficio.id }}</td>
+          <td><strong>{{ beneficio.nome }}</strong></td>
+          <td>{{ beneficio.descricao }}</td>
+          <td class="value-text">{{ beneficio.valor | currency:'BRL':'symbol':'1.2-2' }}</td>
+          <td>
+            <span
+              class="badge"
+              [ngClass]="beneficio.ativo ? 'badge-success' : 'badge-muted'">
+              {{ beneficio.ativo ? 'Ativo' : 'Inativo' }}
+            </span>
+          </td>
+          <td>
+            <div class="actions">
+              <button class="btn btn-secondary" (click)="editar(beneficio.id)">Editar</button>
+              <button class="btn btn-danger" (click)="excluir(beneficio.id)">Excluir</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,35 +1,14 @@
-package com.seuprojeto.backend.entity;
+package com.seuprojeto.backend.dto;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-
-@Entity
-@Table(name = "BENEFICIO")
-public class Beneficio {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class BeneficioResponse {
     private Long id;
-
-    @Column(nullable = false, length = 100)
     private String nome;
-
-    @Column(length = 255)
     private String descricao;
-
-    @Column(nullable = false, precision = 15, scale = 2)
     private BigDecimal valor;
-
-    @Column(nullable = false)
-    private Boolean ativo = Boolean.TRUE;
-
-    @Version
-    @Column(nullable = false)
-    private Long version = 0L;
+    private Boolean ativo;
+    private Long version;
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }

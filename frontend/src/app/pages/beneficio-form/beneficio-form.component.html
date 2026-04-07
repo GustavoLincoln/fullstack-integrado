@@ -1,0 +1,59 @@
+<div>
+  <h1 class="page-title">{{ editando ? 'Editar benefício' : 'Novo benefício' }}</h1>
+  <p class="page-subtitle">
+    {{ editando ? 'Atualize as informações do benefício.' : 'Preencha os dados para cadastrar um novo benefício.' }}
+  </p>
+</div>
+
+<div class="card" *ngIf="carregando">
+  <div class="loading-block">
+    <div class="spinner"></div>
+    <div class="loading-text">Carregando dados do benefício...</div>
+  </div>
+</div>
+
+<div class="card" *ngIf="!carregando">
+  <div *ngIf="erro" class="alert alert-error">
+    {{ erro }}
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="salvar()">
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input id="nome" class="input" type="text" formControlName="nome" placeholder="Ex: Vale Alimentação" />
+      </div>
+
+      <div class="form-group">
+        <label for="valor">Valor</label>
+        <input id="valor" class="input" type="number" step="0.01" formControlName="valor" placeholder="0,00" />
+      </div>
+
+      <div class="form-group full">
+        <label for="descricao">Descrição</label>
+        <textarea
+          id="descricao"
+          class="textarea"
+          formControlName="descricao"
+          placeholder="Descreva o benefício"></textarea>
+      </div>
+
+      <div class="form-group full">
+        <label>Status</label>
+        <div class="checkbox-row">
+          <input id="ativo" type="checkbox" formControlName="ativo" />
+          <label for="ativo">Benefício ativo</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn btn-primary" type="submit" [disabled]="salvando">
+        {{ salvando ? 'Salvando...' : 'Salvar' }}
+      </button>
+      <button class="btn btn-secondary" type="button" (click)="voltar()" [disabled]="salvando">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>

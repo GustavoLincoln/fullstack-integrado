@@ -1,0 +1,3 @@
+INSERT INTO BENEFICIO (NOME, DESCRICAO, VALOR, ATIVO, VERSION) VALUES
+('Beneficio A', 'Descricao A', 1000.00, TRUE, 0),
+('Beneficio B', 'Descricao B', 500.00, TRUE, 0);
