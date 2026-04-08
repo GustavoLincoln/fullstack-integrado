@@ -72,3 +72,23 @@ Exemplo de requisição:
   "toId": 2,
   "valor": 50.00
 }
+
+🧠 Regras de Negócio
+
+A transferência garante:
+Validação de saldo suficiente
+Proibição de transferência para o mesmo benefício
+Consistência transacional
+Controle de concorrência
+
+🐞 Correção do Bug (EJB)
+Problemas encontrados:
+Transferência sem validação de saldo
+Ausência de controle de concorrência
+Possibilidade de inconsistência de dados
+
+Soluções implementadas:
+Validação de saldo insuficiente
+Uso de LockModeType.PESSIMISTIC_WRITE
+Execução dentro de transação
+Garantia de atomicidade
