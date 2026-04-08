@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.seuprojeto.backend.controller.BeneficioControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.427 s - in com.seuprojeto.backend.controller.BeneficioControllerTest

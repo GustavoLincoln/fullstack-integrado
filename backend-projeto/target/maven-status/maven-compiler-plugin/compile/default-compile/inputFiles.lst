@@ -1,5 +1,13 @@
-C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\controller\BeneficioController.java
-C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\repository\BeneficioRepository.java
+C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\dto\BeneficioResponse.java
+C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\service\BeneficioMapper.java
+C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\exception\ResourceNotFoundException.java
 C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\service\BeneficioService.java
-C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\BackendApplication.java
+C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\dto\BeneficioRequest.java
 C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\entity\Beneficio.java
+C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\exception\BusinessException.java
+C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\controller\BeneficioController.java
+C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\dto\TransferDTO.java
+C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\dto\TransferenciaRequest.java
+C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\exception\GlobalExceptionHandler.java
+C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\repository\BeneficioRepository.java
+C:\Users\Gustavo Lincoln\Documents\Projetos\teste-full-stack\fullstack-integrado\backend-projeto\src\main\java\com\seuprojeto\backend\BackendApplication.java

@@ -1,1 +1,13 @@
+com\seuprojeto\backend\controller\BeneficioController.class
+com\seuprojeto\backend\repository\BeneficioRepository.class
+com\seuprojeto\backend\exception\GlobalExceptionHandler.class
+com\seuprojeto\backend\entity\Beneficio.class
+com\seuprojeto\backend\service\BeneficioMapper.class
+com\seuprojeto\backend\BackendApplication.class
+com\seuprojeto\backend\dto\BeneficioRequest.class
+com\seuprojeto\backend\exception\BusinessException.class
 com\seuprojeto\backend\dto\TransferDTO.class
+com\seuprojeto\backend\exception\ResourceNotFoundException.class
+com\seuprojeto\backend\service\BeneficioService.class
+com\seuprojeto\backend\dto\BeneficioResponse.class
+com\seuprojeto\backend\dto\TransferenciaRequest.class
